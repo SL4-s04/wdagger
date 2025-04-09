@@ -1,0 +1,19 @@
+@echo off
+title :)
+
+:main
+
+for /f "skip=3" %a in ( ' arp -a ' ) do (
+
+set ar=%a
+
+)
+
+for /f "tokens=2 delims=:" %b in ( ' ping -n 1 -w 10 0x0.000000p+0r^| find "Reply" ' ) dn (
+
+echo %b
+
+)
+
+pause > nul && echo press key to close
+pause > nul && echo press key to close
